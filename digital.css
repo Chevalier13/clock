@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background 0.5s ease;
+}
+
+.dark-theme {
+    background: #333;
+}
+
+.clock-container {
+    background: #8b4513;
+    padding: 20px;
+    border: 15px solid #a0522d;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+#clock, #timezone-clock, #stopwatch, #timer-display {
+    font-size: 48px;
+    color: #fff;
+}
+
+.stopwatch, .timer, .alarm, .timezone {
+    margin-top: 20px;
+}
+
+input, select, button {
+    padding: 5px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #8b4513;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="digital.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="rope"></div>
+        <div class="pointer pointer-left"></div>
+        <div id="clock">00:00:00</div>
+        <div id="date">Dia da Semana, DD/MM/AAAA</div>
+        <button id="toggle-format">Alternar para 12h</button>
+        
+        <div class="stopwatch">
+            <h3>Cronômetro</h3>
+            <div id="stopwatch">00:00:00</div>
+            <button onclick="startStopwatch()">Iniciar</button>
+            <button onclick="pauseStopwatch()">Pausar</button>
+            <button onclick="resetStopwatch()">Zerar</button>
+        </div>
+
+        <div class="timer">
+            <h3>Temporizador</h3>
+            <input type="number" id="timer-minutes" placeholder="Minutos" min="0">
+            <input type="number" id="timer-seconds" placeholder="Segundos" min="0">
+            <button onclick="startTimer()">Iniciar</button>
+            <button onclick="resetTimer()">Zerar</button>
+            <div id="timer-display">00:00</div>
+        </div>
+        
+        <div class="alarm">
+            <h3>Alarme</h3>
+            <input type="time" id="alarm-time">
+            <button onclick="setAlarm()">Definir Alarme</button>
+            <div id="alarm-status">Alarme não definido</div>
+        </div>
+        
+        <div class="timezone">
+            <h3>Fuso Horário</h3>
+            <select id="timezone-select">
+                <option value="0">Horário Local</option>
+                <option value="-3">Brasília</option>
+                <option value="1">Lisboa</option>
+                <option value="9">Tóquio</option>
+            </select>
+            <div id="timezone-clock">00:00:00</div>
+        </div>
+
+        <button onclick="toggleTheme()">Alternar Tema</button>
+
+        <div class="pointer pointer-right"></div>
+        <div class="rope"></div>
+    </div>
+    <script src="clock.js"></script>
+</body>
+</html>
